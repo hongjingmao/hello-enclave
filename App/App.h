@@ -7,6 +7,7 @@
 #include "sgx_urts.h"
 #include "sgx_utils/sgx_utils.h"
 
+# define ENCLAVE_FILENAME "enclave.signed.so"
 
 extern sgx_enclave_id_t global_eid;    /* global enclave id */
 
