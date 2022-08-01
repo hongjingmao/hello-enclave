@@ -1,7 +1,10 @@
 #include <cstdio>
 #include <cstring>
+#include <stdio.h>
+#include <iostream>
 #include "sgx_urts.h"
 #include "sgx_utils.h"
+#include "Enclave_u.h"
 
 #ifndef TRUE
 # define TRUE 1
@@ -90,6 +93,6 @@ void ocall_addsalt(int *msg){
     if (!is_ecall_successful(ret, "Sealing failed :(", ecall_status)) {
         return;
     }
-    std::cout << "Add salt success!" << unsealed << std::endl;
+    std::cout << "Add salt success!" << std::endl;
     return;
 }
