@@ -20,4 +20,3 @@ This template is based on the SampleEnclave app of the sample enclaves provided 
 
 ## Contribute
 
-Any help for the above TODOs or any general feedback will be much appreciated! Go ahead and submit those PRs in!
