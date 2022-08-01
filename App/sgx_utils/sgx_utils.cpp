@@ -81,3 +81,15 @@ bool is_ecall_successful(sgx_status_t sgx_status, const std::string& err_msg,
     }
     return true;
 }
+
+void ocall_addsalt(int *msg){
+    sgx_status_t ret = SGX_ERROR_UNEXPECTED;
+    sgx_status_t ecall_status;
+    ret = ecall_addsalt(global_eid, &ecall_status, &msg);
+
+    if (!is_ecall_successful(ret, "Sealing failed :(", ecall_status)) {
+        return;
+    }
+    std::cout << "Add salt success!" << unsealed << std::endl;
+    return;
+}

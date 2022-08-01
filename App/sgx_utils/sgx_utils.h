@@ -9,4 +9,6 @@ int initialize_enclave(sgx_enclave_id_t* eid, const std::string& launch_token_pa
 
 bool is_ecall_successful(sgx_status_t sgx_status, const std::string& err_msg, sgx_status_t ecall_return_value = SGX_SUCCESS);
 
+void ocall_addsalt(int *msg);
+
 #endif // SGX_UTILS_H_

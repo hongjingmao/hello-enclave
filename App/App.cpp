@@ -49,5 +49,8 @@ int main(int argc, char const *argv[]) {
 
     std::cout << "Seal round trip success! Receive back " << unsealed << std::endl;
 
+    int msg;
+    ocall_addsalt(&msg);
+
     return 0;
 }
