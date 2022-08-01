@@ -47,9 +47,9 @@ sgx_status_t unseal(sgx_sealed_data_t* sealed_data, size_t sealed_size, uint8_t*
     return status;
 }
 
-sgx_status_t ecall_addsalt(int *msg){
+void ecall_addsalt(int *msg){
     int salt;
     salt = generate_random_number();
-    &msg = salt^*msg;
+    *msg = salt^*msg;
     return;
 }
