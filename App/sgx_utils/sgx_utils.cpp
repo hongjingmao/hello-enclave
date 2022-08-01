@@ -5,6 +5,7 @@
 #include "sgx_urts.h"
 #include "sgx_utils.h"
 #include "Enclave_u.h"
+#include "../App.h"
 
 #ifndef TRUE
 # define TRUE 1
