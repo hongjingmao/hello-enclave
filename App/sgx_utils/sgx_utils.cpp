@@ -91,7 +91,7 @@ void ocall_addsalt(int *msg){
     ret = ecall_addsalt(global_eid, msg);
 
     if (ret != SGX_SUCCESS ) {
-        print_error_message(ret)
+        print_error_message(ret);
         return;
     }
     std::cout << "Add salt success!" << std::endl;
