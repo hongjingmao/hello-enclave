@@ -13,10 +13,13 @@ void ocall_print(const char* str) {
 }
 
 int main(int argc, char const *argv[]) {
-    if (initialize_enclave(&global_eid, "enclave.token", "enclave.signed.so") < 0) {
-        std::cout << "Fail to initialize enclave." << std::endl;
-        return 1;
+    /* Initialize the enclave */
+    if(initialize_enclave() < 0){
+        printf("Enter a character before exit ...\n");
+        getchar();
+        return -1; 
     }
+    
     int ptr;
     sgx_status_t status = generate_random_number(global_eid, &ptr);
     std::cout << status << std::endl;
